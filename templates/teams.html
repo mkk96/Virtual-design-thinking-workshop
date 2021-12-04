@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/welcome.css">
+    <link rel="stylesheet" href="/static/styles/teams.css">
+    <script src="/static/scripts/welcome.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">VDTW</a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('teams') }}">Teams</a></li>
+                <li><a href="/">Logout</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+</nav>
+
+<section class="home">
+</section>
+{% if(mFlag == 0 and aFlag==2)%}
+<form action = "{{ url_for('teams') }}" method = "POST">
+    <div class="container">
+        <div class="center">
+            <button class="button-33" role="button" name="join" value="yes">Start Workshop</button>
+        </div>
+      </div>
+  </form>
+
+{% endif %}
+{% if(mFlag == 0 and aFlag!=2)%}
+<p class="team">WorkShop Not Started Yet! Please wait for a while</p>
+{% endif %}
+{% if(mFlag == 1)%}
+<div id="dvTable"></div>
+{% endif %}
+<script type="text/javascript" language="JavaScript">teamfun('{{result|tojson}}','{{flag}}')</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+            $('.nav').addClass('affix');
+        } else {
+            $('.nav').removeClass('affix');
+        }
+    });
+    $('.navTrigger').click(function () {
+   $(this).toggleClass('active');
+   console.log("Clicked menu");
+   $("#mainListDiv").toggleClass("show_list");
+   $("#mainListDiv").fadeIn();
+
+});
+
+</script>
+</body>
+</html>

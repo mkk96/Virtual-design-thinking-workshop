@@ -1,0 +1,328 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Navigation */
+
+nav {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  background: #eaeeed;
+}
+
+nav ul {
+  padding: 5px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 0;
+  align-items: center;
+}
+nav ul li a {
+  padding: 10px 0;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: large;
+  transition: all 0.2s ease;
+}
+nav ul li a:hover {
+  color: #7eb4e2;
+}
+a.active {
+  border-bottom: 2px solid #ecf0f1;
+}
+
+/* Headings */
+
+h1 {
+  font-size: 5rem;
+  color: #34495e;
+}
+
+/* Sections */
+
+.frames {
+  width: 100%;
+  padding: 50px;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  height: 500px;
+  text-align: center;
+}
+section:nth-child(even) {
+  background: transparent;
+}
+section:nth-child(odd) {
+  background: transparent;
+}
+.sect_1,
+.sect_2,
+.sect_3,
+.sect_4,
+.sect_5 {
+  margin-top: 60px;
+}
+
+footer {
+  height: 500px;
+  background: #34495e;
+}
+
+/******************/
+
+.arrow-pointer {
+  width: 250px;
+  height: 50px;
+  background: #32557f;
+  position: relative;
+}
+
+nav a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 25px solid #7eb4e2;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+}
+
+nav a:before {
+  content: "";
+  position: absolute;
+  right: -25px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 25px solid #32557f;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+}
+
+.column1 {
+  float: left;
+  width: 80%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.column2 {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.chat {
+  margin-top: 60px;
+}
+
+/**********************Notes/*******************/
+body {
+  margin: 0;
+  background: #009578;
+}
+
+#app1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  padding: 24px;
+  gap: 24px;
+}
+
+.note {
+  height: 200px;
+  box-sizing: border-box;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+  resize: none;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.add-note1 {
+  height: 200px;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 120px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-note1:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/***************define*****************************/
+#app2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  padding: 24px;
+  gap: 24px;
+}
+
+
+.add-note2 {
+  height: 200px;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 120px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-note2:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+/*********************ideate**************************/
+#app3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  padding: 24px;
+  gap: 24px;
+}
+
+
+.add-note3 {
+  height: 200px;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 120px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-note3:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+/****************test*******************/
+#app4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  padding: 24px;
+  gap: 24px;
+}
+.add-note4 {
+  height: 200px;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 120px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-note4:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.whiteboard
+{
+  width: 100%;
+  height: 100%;
+  background-color:white;
+}
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgba(220, 0, 0, 1);
+  background-image: linear-gradient(to top left,
+                                    rgba(0, 0, 0, .2),
+                                    rgba(0, 0, 0, .2) 30%,
+                                    rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.styled:hover {
+  background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+              inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+.file {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+
+.file-input label {
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(40deg,#ff6ec4,#7873f5);
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform .2s ease-out;
+}
+
+.file-name {
+  position: absolute;
+  bottom: -35px;
+  left: 10px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+input:hover + label,
+input:focus + label {
+  transform: scale(1.02);
+}
+
+/* Adding an outline to the label on focus */
+input:focus + label {
+  outline: 1px solid #000;
+  outline: -webkit-focus-ring-color auto 2px;
+}

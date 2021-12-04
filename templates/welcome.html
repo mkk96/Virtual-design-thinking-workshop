@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/welcome.css">
+    <script src="/static/scripts/welcome.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">VDTW</a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('teams') }}">Teams</a></li>
+                <li><a href="/">Logout</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+</nav>
+
+<section class="home">
+</section>
+<div>
+  <h2 class="myH2">About</h2>
+  <p class="myP">Virtual design thinking is a highly collaborative and iterative process, in which discoveries and findings from one stage inform and impact the next. Pre-pandemic, the live workshop typically ran for two to three consecutive days to facilitate the momentum required to work through each stage.
+
+    While the schedule was intense—facilitators often worked during breaks and between sessions to document and pull findings through to the next session—there was no doubt that working through all 5 stages in succession as a cohort was the way to go. Our client and internal teams both raved about the efficiencies gained as well as the quality of the outcomes. We were onto a winning formula.</p>
+</div>
+<h2 class="myH2">Participants</h2>
+<!--<div id="dvTable" class="container1"></div>--->
+<div id="dvTable"></div>
+<script type="text/javascript" language="JavaScript">myFunc('{{result|tojson}}','{{flag}}')</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+            $('.nav').addClass('affix');
+        } else {
+            $('.nav').removeClass('affix');
+        }
+    });
+    $('.navTrigger').click(function () {
+   $(this).toggleClass('active');
+   console.log("Clicked menu");
+   $("#mainListDiv").toggleClass("show_list");
+   $("#mainListDiv").fadeIn();
+
+});
+
+</script>
+</body>
+</html>
