@@ -99,11 +99,7 @@ Navigate to https://localhost:8000 and select 'Login'
 
 
 
-
-![Logo](https://i.ibb.co/tPZ0SGr/logo.png)
-
-
 ## Feedback
 
-If you have any feedback, please reach out to us at mukul.kumar@students.iiit.ac.in
+If you have any feedback, please reach out to us at mukul1996.mc@gmail.com
 
